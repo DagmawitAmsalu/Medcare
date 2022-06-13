@@ -84,11 +84,11 @@ if(isset($_POST['submit']))
                 ?>
                 <form action="appointment.php" method="POST">
                     <h3>Book appointment</h3>
-                    <input type="text" name="fname"  placeholder="First name" class="box">
-                    <input type="text" name="mname"  placeholder="Middle name" class="box">
-                    <input type="text"  name="lname" placeholder="Last name" class="box">
-                    <input type="number" name="pnumber"  placeholder="Phone number" class="box">
-                    <input type="number"  name="age" placeholder="Age" class="box">
+                    <input type="text" name="fname"  placeholder="First name" class="box" required>
+                    <input type="text" name="mname"  placeholder="Middle name" class="box" required>
+                    <input type="text"  name="lname" placeholder="Last name" class="box" required>
+                    <input type="number" name="pnumber"  placeholder="Phone number" class="box" required>
+                    <input type="number"  name="age" placeholder="Age" class="box" required>
 
                     <!-- <div class="age" name="gender" >
                         <input type="radio" placeholder="gender" > female
@@ -96,18 +96,18 @@ if(isset($_POST['submit']))
                     </div> -->
 
                     <div>
-                            <select name ="gender" placeholder="Gender">
+                            <select name ="gender" placeholder="Gender" required>
                                 <option>Male</option>
                                 <option>Female</option>
                             </select>
                         </div>
 
-                    <input type="date" name="date" class="box">
+                    <input type="date" name="date" class="box" required>
                     <h6> Address</h6>
 
                     <div class="col"  >
-                        <input type="text" name="address1"  placeholder="Country" class="box">
-                        <input type="text" name="address2" placeholder="City" class="box">
+                        <input type="text" name="address1"  placeholder="Country" class="box" required>
+                        <input type="text" name="address2" placeholder="City" class="box" required>
                     </div>
 
                     <input type="submit" name="submit" value="Book appointment" class="btn">
